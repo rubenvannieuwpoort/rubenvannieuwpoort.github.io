@@ -25,24 +25,23 @@
   font-weight: bold; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, u, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+html { font-size: 16px; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 body { line-height: 1; }
 blockquote, q { quotes: none; }
 blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 table { border-collapse: collapse; border-spacing: 0; }
 
-pre, code { font-size: 93%; }
+pre, code { font-size: .93rem; }
 
 body {
-	color: 202020;
-	margin: 59px 10px;
-	font: normal 16px/24px "Crimson", Georgia, serif;
+	font: normal 1rem/1.5rem "Crimson", Georgia, serif;
 }
 
 p {
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
@@ -61,32 +60,45 @@ strong {
 }
 
 h1 {
-	font: 40px/40px "Crimson", Georgia, serif;
+	font: 2.5rem "Crimson", Georgia, serif;
 	text-align: center;
     padding: 20px 0px;
 }
 
 h2 {
-	font: 600 30px/24px "Crimson", Georgia, serif;
-    margin: 69px 0 40px 0;
+	font: 600 1.875rem "Crimson", Georgia, serif;
+    margin: 69px 0 25px 0;
     padding-bottom: 3px;
 }
 
 h3 {
-    font: 600 20px/10px "Crimson", Georgia, serif;
+    font: 600 1.25rem "Crimson", Georgia, serif;
     margin: 40px 0 0 0;
     padding-bottom: 3px;
 }
 
-article {
-	margin: auto;
-	background-color: #ffffff;
-	position: relative;
-	width: 715px;
-	padding: 50px;
+@media only screen {
+	
+	body { margin: 59px 10px; }
+	
+	article {
+		margin: auto;
+		position: relative;
+		width: 715px;
+		padding: 50px;
+	}
 }
 
-@media only screen {
+@media only screen and (min-width: 850px) {
+	
 	body { background-color: #525659; }
-	article { box-shadow: 1px 1px 3px 2px #333333;
+	
+	article {
+		background-color: #ffffff;
+		box-shadow: 1px 1px 3px 2px #333333;
+	}
+}
+
+@page {
+    margin: 25mm;    
 }
