@@ -45,6 +45,11 @@ p {
     margin-inline-end: 0px;
 }
 
+img {
+	display: block;
+	margin: 25px auto;
+}
+
 a {
 	color: #0c93e4;
     text-decoration: none;
