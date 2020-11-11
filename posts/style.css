@@ -95,19 +95,20 @@ h3 {
 	article {
 		margin: auto;
 		position: relative;
-		width: 715px;
+		max-width: 715px;
 		padding: 50px;
 	}
 }
 
-@media only screen and (min-width: 850px) {
+/* to display it like the pdf viewer in chrome or firefox */
+/*@media only screen and (min-width: 850px) {
 	body { background-color: #525659; }
 	
 	article {
 		background-color: #ffffff;
 		box-shadow: 1px 1px 3px 2px #333333;
 	}
-}
+}*/
 
 @page {
     margin: 25mm;
