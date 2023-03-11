@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="A fast, simple, effective hash function.">
+<title>The Fowler-Noll-Vo hash</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="style.css"> <link rel="stylesheet" type="text/css" href="katex.min.css">
+
+<link rel="shortcut icon" type="image/png" href="../favicon.png">
+</head>
+<body>
+<article><h1>The Fowler–Noll–Vo hash</h1>
+<p>The Fowler–Noll–Vo hash function is a simple but effective hash function. If you ever need to implement one from scratch, it is an excellent choice.</p>
+<p>Note that this is not a cryptographic hash. It is intended to be used in hash tables and checksums.</p>
+<p>The algorithm (or more precisely, the FNV-1a variant of the algorithm) is as follows:</p>
+<pre><code>#define FNV_OFFSET_BASIS 14695981039346656037
+#define FNV_PRIME 1099511628211
+
+uint64_t fnv_hash(uint8_t *data, size_t length) {
+	uint64_t hash = FNV_OFFSET_BASIS;
+
+	for (size_t i = 0; i &lt; length; i++) {
+		hash = hash ^ data[i];
+		hash *= FNV_PRIME;
+	}
+
+	return hash;
+}
+</code></pre>
+<p>This is the 64-bit variant. For other bit sizes, the size of the <code>hash</code> variable needs to be adapted and different constants need to be used for <code>FNV_PRIME</code> and <code>FNV_OFFSET_BASIS</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Bits</th>
+<th>FNV prime</th>
+<th>FNV offset basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>32</td>
+<td>16777619</td>
+<td>2166136261</td>
+</tr>
+<tr>
+<td>64</td>
+<td>1099511628211</td>
+<td>14695981039346656037</td>
+</tr>
+<tr>
+<td>128</td>
+<td>309485009821345068724781371</td>
+<td>144066263297769815596495629667062367629</td>
+</tr>
+<tr>
+<td>256</td>
+<td>374144419156711147060143317 175368453031918731002211</td>
+<td>100029257958052580907070968620625704837 092796014241193945225284501741471925557</td>
+</tr>
+<tr>
+<td>512</td>
+<td>358359158748448673689190764 890951084499463279557543925 583998256154206699388825751 26094039892345713852759</td>
+<td>965930312949666949800943540071631046609 041874567263789610837432943446265799458 293219771643844981305189220653980578449 5328239340083876191928701583869517785</td>
+</tr>
+<tr>
+<td>1024</td>
+<td>501645651011311865543459881103 527895503076534540479074430301 752383111205510814745150915769 222029538271616265187852689524 938529229181652437508374669137 180409427187316048473796672026 0389217684476157468082573</td>
+<td>14197795064947621068722070641403218320 88062279544193396087847491461758272325 22967323037177221508640965212023555493 65628174669108571814760471015076148029 75596980407732015769245856300321530495 71501574036444603635505054127112859663 61610267868082893823963790439336411086 884584107735010676915</td>
+</tr>
+</tbody>
+</table>
+<h2>References</h2>
+<p><a href="http://www.isthe.com/chongo/tech/comp/fnv">FNV Hash</a> by Landon Curt Noll, one of the authors of the FNV hash function.</p>
+</article>
+</body>
+</html>
