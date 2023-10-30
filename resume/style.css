@@ -136,6 +136,15 @@ img.portrait {
 	padding-top: 32px;
 }
 
+.skill {
+	clear: both;
+	padding-top: 16px;
+}
+
+.skill:first-of-type {
+	padding-top: 32px;
+}
+
 .client {
 	margin-bottom: 5px;
 	margin-top: 10px;
@@ -232,7 +241,6 @@ strong {
 
 p {
 	margin-top: 15px;
-	margin-bottom: 15px;
 }
 
 @page {
