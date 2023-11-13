@@ -1,0 +1,3600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="asdf">
+<title>API Overview</title>
+<style>
+    .request {
+      margin: 20px 0;
+      border: 1px solid black;
+      padding: 10px; /* optional, add padding if needed */
+    }
+  </style>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="style.css"> <link rel="stylesheet" type="text/css" href="katex.min.css">
+<link rel="shortcut icon" type="image/png" href="../favicon.png">
+</head>
+<body>
+<article><h1>API overview</h1>
+<h2>Step 1</h2>
+<h3>Select your location</h3>
+
+<div class="request">
+    <code>GET https://booking.racesquare.nl/api/organizers</code><br>
+    <details>
+        <summary>Response</summary>
+        <code>200 OK</code>
+        <pre><code>[
+    {
+        &quot;id&quot;: 5004843,
+        &quot;title&quot;: &quot;Racesquare Utrecht&quot;,
+        &quot;postalCode&quot;: &quot;3543AS&quot;,
+        &quot;city&quot;: &quot;Utrecht&quot;,
+        &quot;street&quot;: &quot;Hertogswetering&quot;,
+        &quot;houseNumber&quot;: &quot;171A&quot;,
+        &quot;phone&quot;: &quot;085 130 4333&quot;,
+        &quot;email&quot;: &quot;utrecht@racesquare.nl&quot;,
+        &quot;distributions&quot;: [
+            {
+                &quot;id&quot;: 179703,
+                &quot;owner&quot;: null
+            }
+        ],
+        &quot;organization&quot;: null
+    },
+    {
+        &quot;id&quot;: 5043352,
+        &quot;title&quot;: &quot;Racesquare Circuit Zandvoort&quot;,
+        &quot;postalCode&quot;: &quot;2041KP&quot;,
+        &quot;city&quot;: &quot;Zandvoort&quot;,
+        &quot;street&quot;: &quot;Burgemeester van Alphenstraat&quot;,
+        &quot;houseNumber&quot;: &quot;108&quot;,
+        &quot;phone&quot;: &quot;085-1304334&quot;,
+        &quot;email&quot;: &quot;CircuitZandvoort@racesquare.nl&quot;,
+        &quot;distributions&quot;: [
+            {
+                &quot;id&quot;: 179921,
+                &quot;owner&quot;: null
+            }
+        ],
+        &quot;organization&quot;: null
+    },
+    {
+        &quot;id&quot;: 5298009,
+        &quot;title&quot;: &quot;Racesquare Rotterdam&quot;,
+        &quot;postalCode&quot;: &quot;3077MK&quot;,
+        &quot;city&quot;: &quot;Rotterdam&quot;,
+        &quot;street&quot;: &quot;Cor Kieboomplein&quot;,
+        &quot;houseNumber&quot;: &quot;513&quot;,
+        &quot;phone&quot;: &quot;088 303 2803&quot;,
+        &quot;email&quot;: &quot;rotterdam@racesquare.nl&quot;,
+        &quot;distributions&quot;: [
+            {
+                &quot;id&quot;: 180423,
+                &quot;owner&quot;: null
+            }
+        ],
+        &quot;organization&quot;: null
+    },
+    {
+        &quot;id&quot;: 5498022,
+        &quot;title&quot;: &quot;Racesquare Alkmaar&quot;,
+        &quot;postalCode&quot;: &quot;1823CJ&quot;,
+        &quot;city&quot;: &quot;Alkmaar&quot;,
+        &quot;street&quot;: &quot;Noorderkade&quot;,
+        &quot;houseNumber&quot;: &quot;171&quot;,
+        &quot;phone&quot;: &quot;085 130 4335&quot;,
+        &quot;email&quot;: &quot;alkmaar@racesquare.nl&quot;,
+        &quot;distributions&quot;: [
+            {
+                &quot;id&quot;: 180759,
+                &quot;owner&quot;: null
+            }
+        ],
+        &quot;organization&quot;: null
+    },
+    {
+        &quot;id&quot;: 5818309,
+        &quot;title&quot;: &quot;Racesquare Zwolle&quot;,
+        &quot;postalCode&quot;: &quot;8025CP&quot;,
+        &quot;city&quot;: &quot;Zwolle&quot;,
+        &quot;street&quot;: &quot;Stadionplein&quot;,
+        &quot;houseNumber&quot;: &quot;3&quot;,
+        &quot;phone&quot;: &quot;085 130 4336&quot;,
+        &quot;email&quot;: &quot;zwolle@racesquare.nl&quot;,
+        &quot;distributions&quot;: [
+            {
+                &quot;id&quot;: 181032,
+                &quot;owner&quot;: null
+            }
+        ],
+        &quot;organization&quot;: null
+    }
+]</code></pre>
+    </details>
+</div>
+
+<div class="request">
+    <code>GET https://booking.racesquare.nl/api/vouchers</code><br>
+    <details>
+        <summary>Response</summary>
+        <code>200 OK</code>
+        <pre><code>[]</code></pre>
+    </details>
+</div>
+
+<div class="request">
+    <code>GET https://booking.racesquare.nl/api/organizers</code><br>
+    <details>
+        <summary>Response</summary>
+        <code>200 OK</code>
+        <pre><code>[
+    {
+        &quot;id&quot;: 5004843,
+        &quot;title&quot;: &quot;Racesquare Utrecht&quot;,
+        &quot;postalCode&quot;: &quot;3543AS&quot;,
+        &quot;city&quot;: &quot;Utrecht&quot;,
+        &quot;street&quot;: &quot;Hertogswetering&quot;,
+        &quot;houseNumber&quot;: &quot;171A&quot;,
+        &quot;phone&quot;: &quot;085 130 4333&quot;,
+        &quot;email&quot;: &quot;utrecht@racesquare.nl&quot;,
+        &quot;distributions&quot;: [
+            {
+                &quot;id&quot;: 179703,
+                &quot;owner&quot;: null
+            }
+        ],
+        &quot;organization&quot;: null
+    },
+    {
+        &quot;id&quot;: 5043352,
+        &quot;title&quot;: &quot;Racesquare Circuit Zandvoort&quot;,
+        &quot;postalCode&quot;: &quot;2041KP&quot;,
+        &quot;city&quot;: &quot;Zandvoort&quot;,
+        &quot;street&quot;: &quot;Burgemeester van Alphenstraat&quot;,
+        &quot;houseNumber&quot;: &quot;108&quot;,
+        &quot;phone&quot;: &quot;085-1304334&quot;,
+        &quot;email&quot;: &quot;CircuitZandvoort@racesquare.nl&quot;,
+        &quot;distributions&quot;: [
+            {
+                &quot;id&quot;: 179921,
+                &quot;owner&quot;: null
+            }
+        ],
+        &quot;organization&quot;: null
+    },
+    {
+        &quot;id&quot;: 5298009,
+        &quot;title&quot;: &quot;Racesquare Rotterdam&quot;,
+        &quot;postalCode&quot;: &quot;3077MK&quot;,
+        &quot;city&quot;: &quot;Rotterdam&quot;,
+        &quot;street&quot;: &quot;Cor Kieboomplein&quot;,
+        &quot;houseNumber&quot;: &quot;513&quot;,
+        &quot;phone&quot;: &quot;088 303 2803&quot;,
+        &quot;email&quot;: &quot;rotterdam@racesquare.nl&quot;,
+        &quot;distributions&quot;: [
+            {
+                &quot;id&quot;: 180423,
+                &quot;owner&quot;: null
+            }
+        ],
+        &quot;organization&quot;: null
+    },
+    {
+        &quot;id&quot;: 5498022,
+        &quot;title&quot;: &quot;Racesquare Alkmaar&quot;,
+        &quot;postalCode&quot;: &quot;1823CJ&quot;,
+        &quot;city&quot;: &quot;Alkmaar&quot;,
+        &quot;street&quot;: &quot;Noorderkade&quot;,
+        &quot;houseNumber&quot;: &quot;171&quot;,
+        &quot;phone&quot;: &quot;085 130 4335&quot;,
+        &quot;email&quot;: &quot;alkmaar@racesquare.nl&quot;,
+        &quot;distributions&quot;: [
+            {
+                &quot;id&quot;: 180759,
+                &quot;owner&quot;: null
+            }
+        ],
+        &quot;organization&quot;: null
+    },
+    {
+        &quot;id&quot;: 5818309,
+        &quot;title&quot;: &quot;Racesquare Zwolle&quot;,
+        &quot;postalCode&quot;: &quot;8025CP&quot;,
+        &quot;city&quot;: &quot;Zwolle&quot;,
+        &quot;street&quot;: &quot;Stadionplein&quot;,
+        &quot;houseNumber&quot;: &quot;3&quot;,
+        &quot;phone&quot;: &quot;085 130 4336&quot;,
+        &quot;email&quot;: &quot;zwolle@racesquare.nl&quot;,
+        &quot;distributions&quot;: [
+            {
+                &quot;id&quot;: 181032,
+                &quot;owner&quot;: null
+            }
+        ],
+        &quot;organization&quot;: null
+    }
+]</code></pre>
+    </details>
+</div>
+
+<div class="request">
+    <code>GET https://booking.racesquare.nl/api/purchase?langCode=en</code><br>
+    Response: <code>204 No Content</code> (but sets a bunch of cookies)
+</div>
+
+
+<h3>Select your experience</h3>
+
+<div class="request">
+    <code>GET https://booking.racesquare.nl/api/eventgroups/5004843</code><br>
+    <details>
+        <summary>Response</summary>
+        <code>200 OK</code><br>
+        <pre><code>[
+    {
+        &quot;id&quot;: 6026,
+        &quot;title&quot;: &quot;RN365 Live&quot;,
+        &quot;description&quot;: null,
+        &quot;isUpsellProducts&quot;: false,
+        &quot;isSubscription&quot;: false
+    },
+    {
+        &quot;id&quot;: 5529,
+        &quot;title&quot;: &quot;Producten&quot;,
+        &quot;description&quot;: null,
+        &quot;isUpsellProducts&quot;: true,
+        &quot;isSubscription&quot;: false
+    },
+    {
+        &quot;id&quot;: 5410,
+        &quot;title&quot;: &quot;30 Minute Race&quot;,
+        &quot;description&quot;: null,
+        &quot;isUpsellProducts&quot;: false,
+        &quot;isSubscription&quot;: false
+    },
+    {
+        &quot;id&quot;: 3677,
+        &quot;title&quot;: &quot;Clinics&quot;,
+        &quot;description&quot;: null,
+        &quot;isUpsellProducts&quot;: false,
+        &quot;isSubscription&quot;: false
+    },
+    {
+        &quot;id&quot;: 3279,
+        &quot;title&quot;: &quot;Kids Races&quot;,
+        &quot;description&quot;: null,
+        &quot;isUpsellProducts&quot;: false,
+        &quot;isSubscription&quot;: false
+    },
+    {
+        &quot;id&quot;: 3277,
+        &quot;title&quot;: &quot;       Race Experience&quot;,
+        &quot;description&quot;: null,
+        &quot;isUpsellProducts&quot;: false,
+        &quot;isSubscription&quot;: false
+    }
+]</code></pre>
+    </details>
+</div>
+
+
+<h2>Step 2 - Pick a date</h2>
+
+<div class="request">
+    <code>GET https://booking.racesquare.nl/api/events/get-available-event-dates?organizerId=5004843&amp;eventGroupId=3277&amp;start=11/01/2023%2000:00:00&amp;end=12/01/2023%2000:00:00</code><br>
+    <details>
+        <summary>Response</summary>
+        <code>200 OK</code>
+        <pre><code>[
+    &quot;2023-11-26T00:00:00&quot;,
+    &quot;2023-11-18T00:00:00&quot;,
+    &quot;2023-11-21T00:00:00&quot;,
+    &quot;2023-11-15T00:00:00&quot;,
+    &quot;2023-11-17T00:00:00&quot;,
+    &quot;2023-11-19T00:00:00&quot;,
+    &quot;2023-11-29T00:00:00&quot;,
+    &quot;2023-11-23T00:00:00&quot;,
+    &quot;2023-11-24T00:00:00&quot;,
+    &quot;2023-11-25T00:00:00&quot;,
+    &quot;2023-11-14T00:00:00&quot;,
+    &quot;2023-11-22T00:00:00&quot;,
+    &quot;2023-11-30T00:00:00&quot;,
+    &quot;2023-11-28T00:00:00&quot;,
+    &quot;2023-11-16T00:00:00&quot;
+]</code></pre>
+    </details>
+</div>
+
+
+<h2>Step 3 - Choose track and timeslot</h2>
+
+<div class="request">
+    <code>GET https://booking.racesquare.nl/api/events?organizerId=5004843&amp;eventGroupId=3277&amp;date=11/17/2023%2000:00:00</code><br>
+    <details>
+        <summary>Response</summary>
+        <code>200 OK</code><br>
+        <pre><code>[
+    {
+        &quot;id&quot;: 365596,
+        &quot;title&quot;: &quot;Abu Dhabi (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365633,
+        &quot;title&quot;: &quot;Abu Dhabi (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365559,
+        &quot;title&quot;: &quot;Abu Dhabi (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367079,
+        &quot;title&quot;: &quot;Abu Dhabi (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367122,
+        &quot;title&quot;: &quot;Abu Dhabi (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 150924,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: [
+                    {
+                        &quot;id&quot;: 517910,
+                        &quot;startTime&quot;: &quot;1970-01-01T15:00:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T16:00:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 20,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365590,
+        &quot;title&quot;: &quot;Australie (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365627,
+        &quot;title&quot;: &quot;Australie (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 150930,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: []
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365553,
+        &quot;title&quot;: &quot;Australie (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 152857,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: [
+                    {
+                        &quot;id&quot;: 520316,
+                        &quot;startTime&quot;: &quot;1970-01-01T19:20:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T20:20:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 2,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365552,
+        &quot;title&quot;: &quot;Australie (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365589,
+        &quot;title&quot;: &quot;Australie (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365626,
+        &quot;title&quot;: &quot;Australie (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365561,
+        &quot;title&quot;: &quot;Azerbeidzjan (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365635,
+        &quot;title&quot;: &quot;Azerbeidzjan (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365598,
+        &quot;title&quot;: &quot;Azerbeidzjan (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367123,
+        &quot;title&quot;: &quot;Azerbeidzjan (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367081,
+        &quot;title&quot;: &quot;Azerbeidzjan (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365563,
+        &quot;title&quot;: &quot;Bahrain (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 152859,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: []
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365637,
+        &quot;title&quot;: &quot;Bahrain (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365600,
+        &quot;title&quot;: &quot;Bahrain (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367124,
+        &quot;title&quot;: &quot;Bahrain (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367082,
+        &quot;title&quot;: &quot;Bahrain (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365608,
+        &quot;title&quot;: &quot;Belgie (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 150922,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: []
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365571,
+        &quot;title&quot;: &quot;Belgie (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365534,
+        &quot;title&quot;: &quot;Belgie (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365570,
+        &quot;title&quot;: &quot;Belgie (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365607,
+        &quot;title&quot;: &quot;Belgie (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 206706,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: []
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365533,
+        &quot;title&quot;: &quot;Belgie (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365532,
+        &quot;title&quot;: &quot;Belgie (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365569,
+        &quot;title&quot;: &quot;Belgie (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365606,
+        &quot;title&quot;: &quot;Belgie (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 207101,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: [
+                    {
+                        &quot;id&quot;: 616026,
+                        &quot;startTime&quot;: &quot;1970-01-01T17:00:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T18:00:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 20,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365555,
+        &quot;title&quot;: &quot;Brazilie (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365629,
+        &quot;title&quot;: &quot;Brazilie (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365592,
+        &quot;title&quot;: &quot;Brazilie (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365628,
+        &quot;title&quot;: &quot;Brazilie (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 150920,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: []
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365591,
+        &quot;title&quot;: &quot;Brazilie (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365554,
+        &quot;title&quot;: &quot;Brazilie (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365634,
+        &quot;title&quot;: &quot;Canada (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 150932,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: [
+                    {
+                        &quot;id&quot;: 517918,
+                        &quot;startTime&quot;: &quot;1970-01-01T19:00:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T20:00:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 7,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365597,
+        &quot;title&quot;: &quot;Canada (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365560,
+        &quot;title&quot;: &quot;Canada (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367083,
+        &quot;title&quot;: &quot;Canada (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367125,
+        &quot;title&quot;: &quot;Canada (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365564,
+        &quot;title&quot;: &quot;China (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365601,
+        &quot;title&quot;: &quot;China (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365638,
+        &quot;title&quot;: &quot;China (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365587,
+        &quot;title&quot;: &quot;Groot Brittannie (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365550,
+        &quot;title&quot;: &quot;Groot Brittannie (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365624,
+        &quot;title&quot;: &quot;Groot Brittannie (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365549,
+        &quot;title&quot;: &quot;Groot Brittannie (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365623,
+        &quot;title&quot;: &quot;Groot Brittannie (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365586,
+        &quot;title&quot;: &quot;Groot Brittannie (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367084,
+        &quot;title&quot;: &quot;Groot Brittannie (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 205134,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: [
+                    {
+                        &quot;id&quot;: 613748,
+                        &quot;startTime&quot;: &quot;1970-01-01T15:20:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T16:20:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 18,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 367126,
+        &quot;title&quot;: &quot;Groot Brittannie (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 150934,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: []
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365545,
+        &quot;title&quot;: &quot;Hongarije (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365619,
+        &quot;title&quot;: &quot;Hongarije (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365582,
+        &quot;title&quot;: &quot;Hongarije (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367127,
+        &quot;title&quot;: &quot;Hongarije (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367085,
+        &quot;title&quot;: &quot;Hongarije (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 200648,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: []
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365557,
+        &quot;title&quot;: &quot;Italie - Imola (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365631,
+        &quot;title&quot;: &quot;Italie - Imola (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 206708,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: []
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365594,
+        &quot;title&quot;: &quot;Italie - Imola (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365593,
+        &quot;title&quot;: &quot;Italie - Imola (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365556,
+        &quot;title&quot;: &quot;Italie - Imola (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365630,
+        &quot;title&quot;: &quot;Italie - Imola (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367086,
+        &quot;title&quot;: &quot;Italie - Imola (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367128,
+        &quot;title&quot;: &quot;Italie - Imola (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365622,
+        &quot;title&quot;: &quot;Italie - Monza (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365585,
+        &quot;title&quot;: &quot;Italie - Monza (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365548,
+        &quot;title&quot;: &quot;Italie - Monza (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365584,
+        &quot;title&quot;: &quot;Italie - Monza (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365621,
+        &quot;title&quot;: &quot;Italie - Monza (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365547,
+        &quot;title&quot;: &quot;Italie - Monza (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 205140,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: []
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365546,
+        &quot;title&quot;: &quot;Italie - Monza (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365583,
+        &quot;title&quot;: &quot;Italie - Monza (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365620,
+        &quot;title&quot;: &quot;Italie - Monza (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365551,
+        &quot;title&quot;: &quot;Japan (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365625,
+        &quot;title&quot;: &quot;Japan (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365588,
+        &quot;title&quot;: &quot;Japan (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367129,
+        &quot;title&quot;: &quot;Japan (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367087,
+        &quot;title&quot;: &quot;Japan (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 205138,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: []
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365640,
+        &quot;title&quot;: &quot;Jeddah (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365603,
+        &quot;title&quot;: &quot;Jeddah (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365566,
+        &quot;title&quot;: &quot;Jeddah (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 152861,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: [
+                    {
+                        &quot;id&quot;: 520320,
+                        &quot;startTime&quot;: &quot;1970-01-01T21:20:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T22:20:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 11,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 368976,
+        &quot;title&quot;: &quot;Las Vegas (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-11-30T23:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 368975,
+        &quot;title&quot;: &quot;Las Vegas (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-11-30T23:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 206704,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: [
+                    {
+                        &quot;id&quot;: 615569,
+                        &quot;startTime&quot;: &quot;1970-01-01T13:00:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T14:00:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 20,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 615571,
+                        &quot;startTime&quot;: &quot;1970-01-01T16:00:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T17:00:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 20,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 368977,
+        &quot;title&quot;: &quot;Las Vegas (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-11-30T23:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 206710,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: [
+                    {
+                        &quot;id&quot;: 615577,
+                        &quot;startTime&quot;: &quot;1970-01-01T20:20:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T21:20:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 16,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365558,
+        &quot;title&quot;: &quot;Mexico (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365595,
+        &quot;title&quot;: &quot;Mexico (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365632,
+        &quot;title&quot;: &quot;Mexico (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367130,
+        &quot;title&quot;: &quot;Mexico (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 205132,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: []
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 367088,
+        &quot;title&quot;: &quot;Mexico (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365605,
+        &quot;title&quot;: &quot;Miami (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365568,
+        &quot;title&quot;: &quot;Miami (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365642,
+        &quot;title&quot;: &quot;Miami (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367089,
+        &quot;title&quot;: &quot;Miami (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367131,
+        &quot;title&quot;: &quot;Miami (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365602,
+        &quot;title&quot;: &quot;Monaco (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365639,
+        &quot;title&quot;: &quot;Monaco (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365565,
+        &quot;title&quot;: &quot;Monaco (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365537,
+        &quot;title&quot;: &quot;Nederland (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365611,
+        &quot;title&quot;: &quot;Nederland (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 200650,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: [
+                    {
+                        &quot;id&quot;: 607986,
+                        &quot;startTime&quot;: &quot;1970-01-01T20:00:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T21:00:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 18,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365574,
+        &quot;title&quot;: &quot;Nederland (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365573,
+        &quot;title&quot;: &quot;Nederland (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365536,
+        &quot;title&quot;: &quot;Nederland (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365610,
+        &quot;title&quot;: &quot;Nederland (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365535,
+        &quot;title&quot;: &quot;Nederland (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 205601,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: [
+                    {
+                        &quot;id&quot;: 614367,
+                        &quot;startTime&quot;: &quot;1970-01-01T17:20:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T18:20:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 0,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365609,
+        &quot;title&quot;: &quot;Nederland (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 150926,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: [
+                    {
+                        &quot;id&quot;: 614495,
+                        &quot;startTime&quot;: &quot;1970-01-01T14:00:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T15:00:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 0,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365572,
+        &quot;title&quot;: &quot;Nederland (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 205599,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: [
+                    {
+                        &quot;id&quot;: 614365,
+                        &quot;startTime&quot;: &quot;1970-01-01T17:20:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T18:20:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 0,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 614497,
+                        &quot;startTime&quot;: &quot;1970-01-01T14:00:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T15:00:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 0,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365581,
+        &quot;title&quot;: &quot;Oostenrijk (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365544,
+        &quot;title&quot;: &quot;Oostenrijk (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365618,
+        &quot;title&quot;: &quot;Oostenrijk (Hard)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;BIG LEAGUE. Nog een paar overwinningen en dat stoeltje bij Red Bull is voor jou… Ervaren coureurs gaan (voor) hard! We slaan de vrije training over, duiken direct in de kwalificatie gevolgd door een nog langere race. Uiteraard zijn bandenslijtage, botsen en pitstops de realiteit! Het speelveld is nóg sterker, dus zelf schakelen en time die pitstop(s) perfect. Het weer kan invloed hebben op je strategie. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365543,
+        &quot;title&quot;: &quot;Oostenrijk (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365617,
+        &quot;title&quot;: &quot;Oostenrijk (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 207200,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: [
+                    {
+                        &quot;id&quot;: 616218,
+                        &quot;startTime&quot;: &quot;1970-01-01T18:00:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T19:00:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 12,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365580,
+        &quot;title&quot;: &quot;Oostenrijk (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365616,
+        &quot;title&quot;: &quot;Oostenrijk (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 150928,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: []
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365579,
+        &quot;title&quot;: &quot;Oostenrijk (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365542,
+        &quot;title&quot;: &quot;Oostenrijk (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 205593,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: []
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 367091,
+        &quot;title&quot;: &quot;Qatar (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367133,
+        &quot;title&quot;: &quot;Qatar (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 150936,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: [
+                    {
+                        &quot;id&quot;: 517922,
+                        &quot;startTime&quot;: &quot;1970-01-01T21:00:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T22:00:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 1,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365567,
+        &quot;title&quot;: &quot;Singapore (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365641,
+        &quot;title&quot;: &quot;Singapore (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365604,
+        &quot;title&quot;: &quot;Singapore (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367134,
+        &quot;title&quot;: &quot;Singapore (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367092,
+        &quot;title&quot;: &quot;Singapore (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365578,
+        &quot;title&quot;: &quot;Spanje (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365615,
+        &quot;title&quot;: &quot;Spanje (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365541,
+        &quot;title&quot;: &quot;Spanje (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365540,
+        &quot;title&quot;: &quot;Spanje (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 152853,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: []
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 365577,
+        &quot;title&quot;: &quot;Spanje (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365614,
+        &quot;title&quot;: &quot;Spanje (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365599,
+        &quot;title&quot;: &quot;Verenigde Staten (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365562,
+        &quot;title&quot;: &quot;Verenigde Staten (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 365636,
+        &quot;title&quot;: &quot;Verenigde Staten (Medium)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;GAME ON. Houd je tegenstanders in de gaten en time die pitstop perfect! Kom je vaker of ben je overtuigd van jouw driving skills, kies dan voor de medium races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 1 langere race. Bandenslijtage, botsen en pitstops zijn een feit! Het weer kan nog wel eens omslaan, dus de regenbanden staan klaar. \n&lt;br&gt;&lt;br&gt;\n(1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2023-01-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    },
+    {
+        &quot;id&quot;: 367093,
+        &quot;title&quot;: &quot;Verenigde Staten (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: [
+            {
+                &quot;id&quot;: 152855,
+                &quot;date&quot;: &quot;2023-11-17T01:00:00&quot;,
+                &quot;description&quot;: null,
+                &quot;timeBlocks&quot;: [
+                    {
+                        &quot;id&quot;: 520314,
+                        &quot;startTime&quot;: &quot;1970-01-01T18:20:00&quot;,
+                        &quot;endTime&quot;: &quot;1970-01-01T19:20:00&quot;,
+                        &quot;capacity&quot;: {
+                            &quot;free&quot;: 4,
+                            &quot;inProgress&quot;: 0,
+                            &quot;sold&quot;: 0,
+                            &quot;released&quot;: 0,
+                            &quot;total&quot;: 20
+                        },
+                        &quot;dayScheme&quot;: null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: 367135,
+        &quot;title&quot;: &quot;Verenigde Staten (Soft)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;NO SWEAT. Niet iedereen scheurt dagelijks over een Formule 1-ciruit! Kom je hier voor het eerst of heb je nog niet veel rijervaring, kies dan voor de soft races. Je racet samen met 19 anderen in een uur een vrije training, kwalificatie en 2 sprint races. Maak je niet druk over bandenslijtage, botsen of pitstops. En check dat prachtige weer, geen bandenwissel nodig.  &lt;br&gt;&lt;br&gt; (1 uur | €25) &lt;/p&gt;&quot;,
+        &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+        &quot;thumbnail&quot;: null,
+        &quot;cover&quot;: null,
+        &quot;startAt&quot;: &quot;2022-12-01T00:00:00+00:00&quot;,
+        &quot;endAt&quot;: null,
+        &quot;daySchemes&quot;: []
+    }
+]</code></pre>
+    </details>
+</div>
+
+
+<h2>Step 4 - Choose # of tickets, arrangements, and products</h2>
+
+<div class="request">
+    <code>GET https://booking.racesquare.nl/api/events/368975/tickets?organizerId=5004843&amp;langCode=en</code><br>
+    <details>
+        <summary>Response</summary>
+        <code>200 OK</code>
+        <pre><code>[
+    {
+        &quot;id&quot;: 593960,
+        &quot;translation&quot;: &quot;Race ticket&quot;,
+        &quot;description&quot;: null,
+        &quot;order&quot;: 556825,
+        &quot;priceExclFees&quot;: 25,
+        &quot;priceDetail&quot;: {
+            &quot;base&quot;: 25,
+            &quot;exclFee&quot;: 0
+        },
+        &quot;isVisible&quot;: true,
+        &quot;usesSeating&quot;: false,
+        &quot;usesPromotionCodes&quot;: false,
+        &quot;usesTimeBlock&quot;: true,
+        &quot;minTicketsPerPurchase&quot;: null,
+        &quot;maxTicketsPerPurchase&quot;: null,
+        &quot;buyInSetsOfX&quot;: null,
+        &quot;isVoucherTicket&quot;: false,
+        &quot;isUpsellTicket&quot;: false,
+        &quot;usesCustomBarcodes&quot;: false,
+        &quot;customBarcodes&quot;: [],
+        &quot;relations&quot;: [],
+        &quot;category&quot;: null,
+        &quot;capacity&quot;: {
+            &quot;free&quot;: null,
+            &quot;inProgress&quot;: 0,
+            &quot;sold&quot;: 0,
+            &quot;released&quot;: 0,
+            &quot;total&quot;: null
+        },
+        &quot;event&quot;: {
+            &quot;id&quot;: 368975,
+            &quot;title&quot;: &quot;&quot;,
+            &quot;description&quot;: null,
+            &quot;timeZone&quot;: null,
+            &quot;thumbnail&quot;: null,
+            &quot;cover&quot;: null,
+            &quot;startAt&quot;: &quot;0001-01-01T00:00:00&quot;,
+            &quot;endAt&quot;: null,
+            &quot;daySchemes&quot;: null
+        },
+        &quot;promotionCodes&quot;: [],
+        &quot;promotionCode&quot;: null
+    },
+    {
+        &quot;id&quot;: 593962,
+        &quot;translation&quot;: &quot;Brons arrangement (incl Race Ticket)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;DON’T TELL YOUR BOSS. De ideale lunch break! Race tegen je vrienden of je collega’s, pak dat podium en geniet van je lunch. Als je echt snel bent kun je nog een revanche doen voordat duty calls. Boekbaar tot uiterlijk 15:00 uur.\n&lt;br&gt;&lt;br&gt;\n(2 UUR | €55) &lt;/p&gt;&quot;,
+        &quot;order&quot;: 556827,
+        &quot;priceExclFees&quot;: 50,
+        &quot;priceDetail&quot;: {
+            &quot;base&quot;: 50,
+            &quot;exclFee&quot;: 0
+        },
+        &quot;isVisible&quot;: true,
+        &quot;usesSeating&quot;: false,
+        &quot;usesPromotionCodes&quot;: false,
+        &quot;usesTimeBlock&quot;: true,
+        &quot;minTicketsPerPurchase&quot;: null,
+        &quot;maxTicketsPerPurchase&quot;: null,
+        &quot;buyInSetsOfX&quot;: null,
+        &quot;isVoucherTicket&quot;: false,
+        &quot;isUpsellTicket&quot;: false,
+        &quot;usesCustomBarcodes&quot;: false,
+        &quot;customBarcodes&quot;: [],
+        &quot;relations&quot;: [],
+        &quot;category&quot;: {
+            &quot;id&quot;: 5240,
+            &quot;translation&quot;: &quot;Arrangementen&quot;,
+            &quot;order&quot;: 2634
+        },
+        &quot;capacity&quot;: {
+            &quot;free&quot;: null,
+            &quot;inProgress&quot;: 0,
+            &quot;sold&quot;: 0,
+            &quot;released&quot;: 0,
+            &quot;total&quot;: null
+        },
+        &quot;event&quot;: {
+            &quot;id&quot;: 368975,
+            &quot;title&quot;: &quot;&quot;,
+            &quot;description&quot;: null,
+            &quot;timeZone&quot;: null,
+            &quot;thumbnail&quot;: null,
+            &quot;cover&quot;: null,
+            &quot;startAt&quot;: &quot;0001-01-01T00:00:00&quot;,
+            &quot;endAt&quot;: null,
+            &quot;daySchemes&quot;: null
+        },
+        &quot;promotionCodes&quot;: [],
+        &quot;promotionCode&quot;: null
+    },
+    {
+        &quot;id&quot;: 593991,
+        &quot;translation&quot;: &quot;Goud arrangement (incl Race Ticket)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;FUELING AS A PRO. Wij zorgen voor een volle accu met een hapje en drankje. Daarna ga je de strijd aan tijdens de race. Domineer die podiumceremonie en wrijf het er daarna extra in tijdens het diner. Dit arrangement is inclusief drankarrangement van 1 uur (bier, wijn en fris). \n&lt;br&gt;&lt;br&gt;\n(2,5 UUR | €75) \n&lt;/p&gt;&quot;,
+        &quot;order&quot;: 591263,
+        &quot;priceExclFees&quot;: 75,
+        &quot;priceDetail&quot;: {
+            &quot;base&quot;: 75,
+            &quot;exclFee&quot;: 0
+        },
+        &quot;isVisible&quot;: true,
+        &quot;usesSeating&quot;: false,
+        &quot;usesPromotionCodes&quot;: false,
+        &quot;usesTimeBlock&quot;: true,
+        &quot;minTicketsPerPurchase&quot;: null,
+        &quot;maxTicketsPerPurchase&quot;: null,
+        &quot;buyInSetsOfX&quot;: null,
+        &quot;isVoucherTicket&quot;: false,
+        &quot;isUpsellTicket&quot;: false,
+        &quot;usesCustomBarcodes&quot;: false,
+        &quot;customBarcodes&quot;: [],
+        &quot;relations&quot;: [],
+        &quot;category&quot;: {
+            &quot;id&quot;: 5240,
+            &quot;translation&quot;: &quot;Arrangementen&quot;,
+            &quot;order&quot;: 2634
+        },
+        &quot;capacity&quot;: {
+            &quot;free&quot;: null,
+            &quot;inProgress&quot;: 0,
+            &quot;sold&quot;: 0,
+            &quot;released&quot;: 0,
+            &quot;total&quot;: null
+        },
+        &quot;event&quot;: {
+            &quot;id&quot;: 368975,
+            &quot;title&quot;: &quot;&quot;,
+            &quot;description&quot;: null,
+            &quot;timeZone&quot;: null,
+            &quot;thumbnail&quot;: null,
+            &quot;cover&quot;: null,
+            &quot;startAt&quot;: &quot;0001-01-01T00:00:00&quot;,
+            &quot;endAt&quot;: null,
+            &quot;daySchemes&quot;: null
+        },
+        &quot;promotionCodes&quot;: [],
+        &quot;promotionCode&quot;: null
+    },
+    {
+        &quot;id&quot;: 593992,
+        &quot;translation&quot;: &quot;Zilver arrangement (incl Race Ticket)&quot;,
+        &quot;description&quot;: &quot;&lt;p&gt;DO DRINK &amp; DRIVE. Zolang je natuurlijk niet de Bob bent. Na een hapje en drankje ga je de strijd aan tijdens de race. Na podiumceremonie is het bijtanken met het drank- &amp;snacks arrangement van 1 uur (bier, wijn en fris). \n&lt;br&gt;&lt;br&gt;\n(2 UUR | €60) &lt;/p&gt;&quot;,
+        &quot;order&quot;: 591264,
+        &quot;priceExclFees&quot;: 60,
+        &quot;priceDetail&quot;: {
+            &quot;base&quot;: 60,
+            &quot;exclFee&quot;: 0
+        },
+        &quot;isVisible&quot;: true,
+        &quot;usesSeating&quot;: false,
+        &quot;usesPromotionCodes&quot;: false,
+        &quot;usesTimeBlock&quot;: true,
+        &quot;minTicketsPerPurchase&quot;: null,
+        &quot;maxTicketsPerPurchase&quot;: null,
+        &quot;buyInSetsOfX&quot;: null,
+        &quot;isVoucherTicket&quot;: false,
+        &quot;isUpsellTicket&quot;: false,
+        &quot;usesCustomBarcodes&quot;: false,
+        &quot;customBarcodes&quot;: [],
+        &quot;relations&quot;: [],
+        &quot;category&quot;: {
+            &quot;id&quot;: 5240,
+            &quot;translation&quot;: &quot;Arrangementen&quot;,
+            &quot;order&quot;: 2634
+        },
+        &quot;capacity&quot;: {
+            &quot;free&quot;: null,
+            &quot;inProgress&quot;: 0,
+            &quot;sold&quot;: 0,
+            &quot;released&quot;: 0,
+            &quot;total&quot;: null
+        },
+        &quot;event&quot;: {
+            &quot;id&quot;: 368975,
+            &quot;title&quot;: &quot;&quot;,
+            &quot;description&quot;: null,
+            &quot;timeZone&quot;: null,
+            &quot;thumbnail&quot;: null,
+            &quot;cover&quot;: null,
+            &quot;startAt&quot;: &quot;0001-01-01T00:00:00&quot;,
+            &quot;endAt&quot;: null,
+            &quot;daySchemes&quot;: null
+        },
+        &quot;promotionCodes&quot;: [],
+        &quot;promotionCode&quot;: null
+    },
+    {
+        &quot;id&quot;: 590177,
+        &quot;translation&quot;: &quot;ferrari voor p1!&quot;,
+        &quot;description&quot;: &quot;Maak het feest compleet en kies voor een fles Ferrari Trento. Dit is de mousserende wijn die op het podium wordt gespoten na elke F1 race. Bestel ‘m alvast mee, dan leggen wij hem koud. &quot;,
+        &quot;order&quot;: null,
+        &quot;priceExclFees&quot;: 35,
+        &quot;priceDetail&quot;: {
+            &quot;base&quot;: 35,
+            &quot;exclFee&quot;: 0
+        },
+        &quot;isVisible&quot;: true,
+        &quot;usesSeating&quot;: false,
+        &quot;usesPromotionCodes&quot;: false,
+        &quot;usesTimeBlock&quot;: false,
+        &quot;minTicketsPerPurchase&quot;: null,
+        &quot;maxTicketsPerPurchase&quot;: null,
+        &quot;buyInSetsOfX&quot;: null,
+        &quot;isVoucherTicket&quot;: false,
+        &quot;isUpsellTicket&quot;: true,
+        &quot;usesCustomBarcodes&quot;: false,
+        &quot;customBarcodes&quot;: null,
+        &quot;relations&quot;: [],
+        &quot;category&quot;: null,
+        &quot;capacity&quot;: {
+            &quot;free&quot;: null,
+            &quot;inProgress&quot;: 0,
+            &quot;sold&quot;: 0,
+            &quot;released&quot;: 0,
+            &quot;total&quot;: null
+        },
+        &quot;event&quot;: {
+            &quot;id&quot;: 368658,
+            &quot;title&quot;: &quot;&quot;,
+            &quot;description&quot;: null,
+            &quot;timeZone&quot;: null,
+            &quot;thumbnail&quot;: null,
+            &quot;cover&quot;: null,
+            &quot;startAt&quot;: &quot;0001-01-01T00:00:00&quot;,
+            &quot;endAt&quot;: null,
+            &quot;daySchemes&quot;: null
+        },
+        &quot;promotionCodes&quot;: [],
+        &quot;promotionCode&quot;: null
+    },
+    {
+        &quot;id&quot;: 590179,
+        &quot;translation&quot;: &quot;Racesquare simrace handschoenen&quot;,
+        &quot;description&quot;: &quot;Het dragen van simrace handschoenen is verplicht. Het is hygiënisch en het geeft natuurlijk ook een echt racegevoel en extra grip.\n\nNeem je eigen simrace handschoenen mee of koop ze in onze merchandise shop. De Racesquare simrace handschoenen kosten €1,50, maar zijn gratis als je een MyRacesquare account hebt.\n\nDe handschoenen mag je na gebruik uiteraard mee naar huis nemen.&quot;,
+        &quot;order&quot;: null,
+        &quot;priceExclFees&quot;: 1.5,
+        &quot;priceDetail&quot;: {
+            &quot;base&quot;: 1.5,
+            &quot;exclFee&quot;: 0
+        },
+        &quot;isVisible&quot;: true,
+        &quot;usesSeating&quot;: false,
+        &quot;usesPromotionCodes&quot;: false,
+        &quot;usesTimeBlock&quot;: false,
+        &quot;minTicketsPerPurchase&quot;: null,
+        &quot;maxTicketsPerPurchase&quot;: null,
+        &quot;buyInSetsOfX&quot;: null,
+        &quot;isVoucherTicket&quot;: false,
+        &quot;isUpsellTicket&quot;: true,
+        &quot;usesCustomBarcodes&quot;: false,
+        &quot;customBarcodes&quot;: null,
+        &quot;relations&quot;: [],
+        &quot;category&quot;: null,
+        &quot;capacity&quot;: {
+            &quot;free&quot;: null,
+            &quot;inProgress&quot;: 0,
+            &quot;sold&quot;: 0,
+            &quot;released&quot;: 0,
+            &quot;total&quot;: null
+        },
+        &quot;event&quot;: {
+            &quot;id&quot;: 368658,
+            &quot;title&quot;: &quot;&quot;,
+            &quot;description&quot;: null,
+            &quot;timeZone&quot;: null,
+            &quot;thumbnail&quot;: null,
+            &quot;cover&quot;: null,
+            &quot;startAt&quot;: &quot;0001-01-01T00:00:00&quot;,
+            &quot;endAt&quot;: null,
+            &quot;daySchemes&quot;: null
+        },
+        &quot;promotionCodes&quot;: [],
+        &quot;promotionCode&quot;: null
+    }
+]</code></pre>
+    </details>
+</div>
+
+
+<h2>Step 5 - Enter details and choose payment method</h2>
+
+<div class="request">
+    <code>GET https://booking.racesquare.nl/api/purchase/tickets</code><br>
+    <details>
+        <summary>Response</summary>
+        <code>200 OK</code><br>
+        <pre><code>{
+    &quot;id&quot;: 24617846,
+    &quot;expireAt&quot;: &quot;2023-11-13T09:08:37+00:00&quot;,
+    &quot;status&quot;: &quot;CREATED&quot;,
+    &quot;distribution&quot;: {
+        &quot;id&quot;: 179703,
+        &quot;owner&quot;: {
+            &quot;id&quot;: 5004843,
+            &quot;title&quot;: &quot;Racesquare Utrecht&quot;,
+            &quot;postalCode&quot;: null,
+            &quot;city&quot;: null,
+            &quot;street&quot;: null,
+            &quot;houseNumber&quot;: null,
+            &quot;phone&quot;: null,
+            &quot;email&quot;: null,
+            &quot;distributions&quot;: null,
+            &quot;organization&quot;: null
+        }
+    },
+    &quot;tickets&quot;: [
+        {
+            &quot;id&quot;: 46427572,
+            &quot;status&quot;: &quot;CLAIMED&quot;,
+            &quot;price&quot;: 25,
+            &quot;priceDetail&quot;: {
+                &quot;base&quot;: 25,
+                &quot;exclFee&quot;: 0
+            },
+            &quot;ticketType&quot;: {
+                &quot;id&quot;: 593960,
+                &quot;translation&quot;: &quot;Race ticket&quot;,
+                &quot;description&quot;: null,
+                &quot;order&quot;: 556825,
+                &quot;priceExclFees&quot;: 0,
+                &quot;priceDetail&quot;: {
+                    &quot;base&quot;: 0,
+                    &quot;exclFee&quot;: 0
+                },
+                &quot;isVisible&quot;: false,
+                &quot;usesSeating&quot;: false,
+                &quot;usesPromotionCodes&quot;: false,
+                &quot;usesTimeBlock&quot;: true,
+                &quot;minTicketsPerPurchase&quot;: null,
+                &quot;maxTicketsPerPurchase&quot;: null,
+                &quot;buyInSetsOfX&quot;: null,
+                &quot;isVoucherTicket&quot;: false,
+                &quot;isUpsellTicket&quot;: false,
+                &quot;usesCustomBarcodes&quot;: false,
+                &quot;customBarcodes&quot;: null,
+                &quot;relations&quot;: [],
+                &quot;category&quot;: null,
+                &quot;capacity&quot;: null,
+                &quot;event&quot;: null,
+                &quot;promotionCodes&quot;: [],
+                &quot;promotionCode&quot;: null
+            },
+            &quot;timeBlock&quot;: {
+                &quot;id&quot;: 615569,
+                &quot;startTime&quot;: &quot;1970-01-01T13:00:00&quot;,
+                &quot;endTime&quot;: &quot;1970-01-01T14:00:00&quot;,
+                &quot;capacity&quot;: {
+                    &quot;free&quot;: null,
+                    &quot;inProgress&quot;: 0,
+                    &quot;sold&quot;: 0,
+                    &quot;released&quot;: 0,
+                    &quot;total&quot;: null
+                },
+                &quot;dayScheme&quot;: {
+                    &quot;id&quot;: 0,
+                    &quot;date&quot;: &quot;2023-11-16T23:00:00+00:00&quot;,
+                    &quot;description&quot;: null,
+                    &quot;timeBlocks&quot;: null
+                }
+            },
+            &quot;event&quot;: {
+                &quot;id&quot;: 368975,
+                &quot;title&quot;: &quot;Las Vegas (Soft)&quot;,
+                &quot;description&quot;: null,
+                &quot;timeZone&quot;: &quot;Europe/Amsterdam&quot;,
+                &quot;thumbnail&quot;: null,
+                &quot;cover&quot;: null,
+                &quot;startAt&quot;: &quot;0001-01-01T00:00:00&quot;,
+                &quot;endAt&quot;: null,
+                &quot;daySchemes&quot;: null
+            }
+        }
+    ],
+    &quot;promotionCodes&quot;: [],
+    &quot;customer&quot;: null,
+    &quot;isActive&quot;: true
+}</code></pre>
+    </details>
+</div>
+
+<div class="request">
+    <code>GET https://booking.racesquare.nl/api/payments/methods?organizerId=5004843&amp;langCode=en</code>
+    <details>
+        <summary>Response</summary>
+        <code>200 OK</code>
+        <pre><code>[
+    {
+        &quot;id&quot;: 3696,
+        &quot;translation&quot;: &quot;Visa&quot;,
+        &quot;icon&quot;: null,
+        &quot;isAvailableToEndUser&quot;: false,
+        &quot;feePrice&quot;: 0
+    },
+    {
+        &quot;id&quot;: 3697,
+        &quot;translation&quot;: &quot;MasterCard&quot;,
+        &quot;icon&quot;: null,
+        &quot;isAvailableToEndUser&quot;: false,
+        &quot;feePrice&quot;: 0
+    },
+    {
+        &quot;id&quot;: 3698,
+        &quot;translation&quot;: &quot;iDEAL&quot;,
+        &quot;icon&quot;: null,
+        &quot;isAvailableToEndUser&quot;: false,
+        &quot;feePrice&quot;: 0
+    }
+]</code></pre>
+    </details>
+</div>
+
+<div class="request">
+    <code>GET https://booking.racesquare.nl/api/countries/</code>
+    <details>
+        <summary>Response</summary>
+            <code>200 OK</code>
+            <pre><code>[
+    {
+        &quot;id&quot;: 104,
+        &quot;title&quot;: &quot;Afghanistan&quot;
+    },
+    {
+        &quot;id&quot;: 31,
+        &quot;title&quot;: &quot;Albania&quot;
+    },
+    {
+        &quot;id&quot;: 53,
+        &quot;title&quot;: &quot;Algeria&quot;
+    },
+    {
+        &quot;id&quot;: 32,
+        &quot;title&quot;: &quot;Andorra&quot;
+    },
+    {
+        &quot;id&quot;: 54,
+        &quot;title&quot;: &quot;Angola&quot;
+    },
+    {
+        &quot;id&quot;: 150,
+        &quot;title&quot;: &quot;Antigua and Barbuda&quot;
+    },
+    {
+        &quot;id&quot;: 177,
+        &quot;title&quot;: &quot;Argentina&quot;
+    },
+    {
+        &quot;id&quot;: 105,
+        &quot;title&quot;: &quot;Armenia&quot;
+    },
+    {
+        &quot;id&quot;: 151,
+        &quot;title&quot;: &quot;Aruba&quot;
+    },
+    {
+        &quot;id&quot;: 191,
+        &quot;title&quot;: &quot;Australia&quot;
+    },
+    {
+        &quot;id&quot;: 7,
+        &quot;title&quot;: &quot;Austria&quot;
+    },
+    {
+        &quot;id&quot;: 44,
+        &quot;title&quot;: &quot;Azerbaijan&quot;
+    },
+    {
+        &quot;id&quot;: 152,
+        &quot;title&quot;: &quot;Bahamas&quot;
+    },
+    {
+        &quot;id&quot;: 106,
+        &quot;title&quot;: &quot;Bahrain&quot;
+    },
+    {
+        &quot;id&quot;: 107,
+        &quot;title&quot;: &quot;Bangladesh&quot;
+    },
+    {
+        &quot;id&quot;: 153,
+        &quot;title&quot;: &quot;Barbados&quot;
+    },
+    {
+        &quot;id&quot;: 43,
+        &quot;title&quot;: &quot;Belarus&quot;
+    },
+    {
+        &quot;id&quot;: 1,
+        &quot;title&quot;: &quot;Belgium&quot;
+    },
+    {
+        &quot;id&quot;: 154,
+        &quot;title&quot;: &quot;Belize&quot;
+    },
+    {
+        &quot;id&quot;: 55,
+        &quot;title&quot;: &quot;Benin&quot;
+    },
+    {
+        &quot;id&quot;: 108,
+        &quot;title&quot;: &quot;Bhutan&quot;
+    },
+    {
+        &quot;id&quot;: 178,
+        &quot;title&quot;: &quot;Bolivia&quot;
+    },
+    {
+        &quot;id&quot;: 33,
+        &quot;title&quot;: &quot;Bosnia-Herzegovina&quot;
+    },
+    {
+        &quot;id&quot;: 56,
+        &quot;title&quot;: &quot;Botswana&quot;
+    },
+    {
+        &quot;id&quot;: 179,
+        &quot;title&quot;: &quot;Brazil&quot;
+    },
+    {
+        &quot;id&quot;: 109,
+        &quot;title&quot;: &quot;Brunei&quot;
+    },
+    {
+        &quot;id&quot;: 38,
+        &quot;title&quot;: &quot;Bulgaria&quot;
+    },
+    {
+        &quot;id&quot;: 57,
+        &quot;title&quot;: &quot;Burkina Faso&quot;
+    },
+    {
+        &quot;id&quot;: 58,
+        &quot;title&quot;: &quot;Burundi&quot;
+    },
+    {
+        &quot;id&quot;: 110,
+        &quot;title&quot;: &quot;Cambodia&quot;
+    },
+    {
+        &quot;id&quot;: 59,
+        &quot;title&quot;: &quot;Cameroon&quot;
+    },
+    {
+        &quot;id&quot;: 155,
+        &quot;title&quot;: &quot;Canada&quot;
+    },
+    {
+        &quot;id&quot;: 60,
+        &quot;title&quot;: &quot;Cape Verde&quot;
+    },
+    {
+        &quot;id&quot;: 156,
+        &quot;title&quot;: &quot;Cayman Islands&quot;
+    },
+    {
+        &quot;id&quot;: 61,
+        &quot;title&quot;: &quot;Central African Republic&quot;
+    },
+    {
+        &quot;id&quot;: 62,
+        &quot;title&quot;: &quot;Chad&quot;
+    },
+    {
+        &quot;id&quot;: 180,
+        &quot;title&quot;: &quot;Chile&quot;
+    },
+    {
+        &quot;id&quot;: 111,
+        &quot;title&quot;: &quot;China&quot;
+    },
+    {
+        &quot;id&quot;: 181,
+        &quot;title&quot;: &quot;Colombia&quot;
+    },
+    {
+        &quot;id&quot;: 63,
+        &quot;title&quot;: &quot;Comoros&quot;
+    },
+    {
+        &quot;id&quot;: 64,
+        &quot;title&quot;: &quot;Congo (Congo-Brazzaville)&quot;
+    },
+    {
+        &quot;id&quot;: 157,
+        &quot;title&quot;: &quot;Costa Rica&quot;
+    },
+    {
+        &quot;id&quot;: 65,
+        &quot;title&quot;: &quot;Côte d'Ivoire (Ivory Coast)&quot;
+    },
+    {
+        &quot;id&quot;: 34,
+        &quot;title&quot;: &quot;Croatia&quot;
+    },
+    {
+        &quot;id&quot;: 158,
+        &quot;title&quot;: &quot;Cuba&quot;
+    },
+    {
+        &quot;id&quot;: 159,
+        &quot;title&quot;: &quot;Curaçao&quot;
+    },
+    {
+        &quot;id&quot;: 39,
+        &quot;title&quot;: &quot;Cyprus&quot;
+    },
+    {
+        &quot;id&quot;: 8,
+        &quot;title&quot;: &quot;Czech Republic&quot;
+    },
+    {
+        &quot;id&quot;: 66,
+        &quot;title&quot;: &quot;Democratic Republic of the Congo (Congo-Kinshasa)&quot;
+    },
+    {
+        &quot;id&quot;: 9,
+        &quot;title&quot;: &quot;Denmark&quot;
+    },
+    {
+        &quot;id&quot;: 67,
+        &quot;title&quot;: &quot;Djibouti&quot;
+    },
+    {
+        &quot;id&quot;: 160,
+        &quot;title&quot;: &quot;Dominica&quot;
+    },
+    {
+        &quot;id&quot;: 161,
+        &quot;title&quot;: &quot;Dominican Republic&quot;
+    },
+    {
+        &quot;id&quot;: 113,
+        &quot;title&quot;: &quot;East Timor (Timor-Leste)&quot;
+    },
+    {
+        &quot;id&quot;: 182,
+        &quot;title&quot;: &quot;Ecuador&quot;
+    },
+    {
+        &quot;id&quot;: 68,
+        &quot;title&quot;: &quot;Egypt&quot;
+    },
+    {
+        &quot;id&quot;: 162,
+        &quot;title&quot;: &quot;El Salvador&quot;
+    },
+    {
+        &quot;id&quot;: 69,
+        &quot;title&quot;: &quot;Equatorial Guinea&quot;
+    },
+    {
+        &quot;id&quot;: 70,
+        &quot;title&quot;: &quot;Eritrea&quot;
+    },
+    {
+        &quot;id&quot;: 10,
+        &quot;title&quot;: &quot;Estonia&quot;
+    },
+    {
+        &quot;id&quot;: 71,
+        &quot;title&quot;: &quot;Ethiopia&quot;
+    },
+    {
+        &quot;id&quot;: 183,
+        &quot;title&quot;: &quot;Falkland Islands&quot;
+    },
+    {
+        &quot;id&quot;: 49,
+        &quot;title&quot;: &quot;Faroe Islands&quot;
+    },
+    {
+        &quot;id&quot;: 192,
+        &quot;title&quot;: &quot;Fiji&quot;
+    },
+    {
+        &quot;id&quot;: 11,
+        &quot;title&quot;: &quot;Finland&quot;
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;title&quot;: &quot;France&quot;
+    },
+    {
+        &quot;id&quot;: 184,
+        &quot;title&quot;: &quot;French Guiana&quot;
+    },
+    {
+        &quot;id&quot;: 72,
+        &quot;title&quot;: &quot;Gabon&quot;
+    },
+    {
+        &quot;id&quot;: 73,
+        &quot;title&quot;: &quot;Gambia&quot;
+    },
+    {
+        &quot;id&quot;: 45,
+        &quot;title&quot;: &quot;Georgia&quot;
+    },
+    {
+        &quot;id&quot;: 12,
+        &quot;title&quot;: &quot;Germany&quot;
+    },
+    {
+        &quot;id&quot;: 74,
+        &quot;title&quot;: &quot;Ghana&quot;
+    },
+    {
+        &quot;id&quot;: 13,
+        &quot;title&quot;: &quot;Greece&quot;
+    },
+    {
+        &quot;id&quot;: 163,
+        &quot;title&quot;: &quot;Grenada&quot;
+    },
+    {
+        &quot;id&quot;: 164,
+        &quot;title&quot;: &quot;Guatemala&quot;
+    },
+    {
+        &quot;id&quot;: 51,
+        &quot;title&quot;: &quot;Guinea&quot;
+    },
+    {
+        &quot;id&quot;: 75,
+        &quot;title&quot;: &quot;Guinea-Bissau&quot;
+    },
+    {
+        &quot;id&quot;: 185,
+        &quot;title&quot;: &quot;Guyana&quot;
+    },
+    {
+        &quot;id&quot;: 165,
+        &quot;title&quot;: &quot;Haiti&quot;
+    },
+    {
+        &quot;id&quot;: 166,
+        &quot;title&quot;: &quot;Honduras&quot;
+    },
+    {
+        &quot;id&quot;: 14,
+        &quot;title&quot;: &quot;Hungary&quot;
+    },
+    {
+        &quot;id&quot;: 15,
+        &quot;title&quot;: &quot;Iceland&quot;
+    },
+    {
+        &quot;id&quot;: 114,
+        &quot;title&quot;: &quot;India&quot;
+    },
+    {
+        &quot;id&quot;: 115,
+        &quot;title&quot;: &quot;Indonesia&quot;
+    },
+    {
+        &quot;id&quot;: 116,
+        &quot;title&quot;: &quot;Iran&quot;
+    },
+    {
+        &quot;id&quot;: 117,
+        &quot;title&quot;: &quot;Iraq&quot;
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;title&quot;: &quot;Ireland&quot;
+    },
+    {
+        &quot;id&quot;: 118,
+        &quot;title&quot;: &quot;Israel&quot;
+    },
+    {
+        &quot;id&quot;: 16,
+        &quot;title&quot;: &quot;Italy&quot;
+    },
+    {
+        &quot;id&quot;: 167,
+        &quot;title&quot;: &quot;Jamaica&quot;
+    },
+    {
+        &quot;id&quot;: 119,
+        &quot;title&quot;: &quot;Japan&quot;
+    },
+    {
+        &quot;id&quot;: 120,
+        &quot;title&quot;: &quot;Jordan&quot;
+    },
+    {
+        &quot;id&quot;: 46,
+        &quot;title&quot;: &quot;Kazakhstan&quot;
+    },
+    {
+        &quot;id&quot;: 76,
+        &quot;title&quot;: &quot;Kenya&quot;
+    },
+    {
+        &quot;id&quot;: 193,
+        &quot;title&quot;: &quot;Kiribati&quot;
+    },
+    {
+        &quot;id&quot;: 47,
+        &quot;title&quot;: &quot;Kosovo&quot;
+    },
+    {
+        &quot;id&quot;: 121,
+        &quot;title&quot;: &quot;Kuwait&quot;
+    },
+    {
+        &quot;id&quot;: 122,
+        &quot;title&quot;: &quot;Kyrgyzstan&quot;
+    },
+    {
+        &quot;id&quot;: 123,
+        &quot;title&quot;: &quot;Laos&quot;
+    },
+    {
+        &quot;id&quot;: 29,
+        &quot;title&quot;: &quot;Latvia&quot;
+    },
+    {
+        &quot;id&quot;: 124,
+        &quot;title&quot;: &quot;Lebanon&quot;
+    },
+    {
+        &quot;id&quot;: 77,
+        &quot;title&quot;: &quot;Lesotho&quot;
+    },
+    {
+        &quot;id&quot;: 78,
+        &quot;title&quot;: &quot;Liberia&quot;
+    },
+    {
+        &quot;id&quot;: 79,
+        &quot;title&quot;: &quot;Libya&quot;
+    },
+    {
+        &quot;id&quot;: 146,
+        &quot;title&quot;: &quot;Liechtenstein&quot;
+    },
+    {
+        &quot;id&quot;: 30,
+        &quot;title&quot;: &quot;Lithuania&quot;
+    },
+    {
+        &quot;id&quot;: 17,
+        &quot;title&quot;: &quot;Luxemburg&quot;
+    },
+    {
+        &quot;id&quot;: 35,
+        &quot;title&quot;: &quot;Macedonia&quot;
+    },
+    {
+        &quot;id&quot;: 80,
+        &quot;title&quot;: &quot;Madagascar&quot;
+    },
+    {
+        &quot;id&quot;: 81,
+        &quot;title&quot;: &quot;Malawi&quot;
+    },
+    {
+        &quot;id&quot;: 125,
+        &quot;title&quot;: &quot;Malaysia&quot;
+    },
+    {
+        &quot;id&quot;: 126,
+        &quot;title&quot;: &quot;Maldives&quot;
+    },
+    {
+        &quot;id&quot;: 82,
+        &quot;title&quot;: &quot;Mali&quot;
+    },
+    {
+        &quot;id&quot;: 36,
+        &quot;title&quot;: &quot;Malta&quot;
+    },
+    {
+        &quot;id&quot;: 194,
+        &quot;title&quot;: &quot;Marshall Islands&quot;
+    },
+    {
+        &quot;id&quot;: 83,
+        &quot;title&quot;: &quot;Mauritania&quot;
+    },
+    {
+        &quot;id&quot;: 84,
+        &quot;title&quot;: &quot;Mauritius&quot;
+    },
+    {
+        &quot;id&quot;: 168,
+        &quot;title&quot;: &quot;Mexico&quot;
+    },
+    {
+        &quot;id&quot;: 195,
+        &quot;title&quot;: &quot;Micronesia&quot;
+    },
+    {
+        &quot;id&quot;: 48,
+        &quot;title&quot;: &quot;Moldavia&quot;
+    },
+    {
+        &quot;id&quot;: 147,
+        &quot;title&quot;: &quot;Monaco&quot;
+    },
+    {
+        &quot;id&quot;: 127,
+        &quot;title&quot;: &quot;Mongolia&quot;
+    },
+    {
+        &quot;id&quot;: 37,
+        &quot;title&quot;: &quot;Montenegro&quot;
+    },
+    {
+        &quot;id&quot;: 85,
+        &quot;title&quot;: &quot;Morocco&quot;
+    },
+    {
+        &quot;id&quot;: 86,
+        &quot;title&quot;: &quot;Mozambique&quot;
+    },
+    {
+        &quot;id&quot;: 128,
+        &quot;title&quot;: &quot;Myanmar (Burma)&quot;
+    },
+    {
+        &quot;id&quot;: 87,
+        &quot;title&quot;: &quot;Namibia&quot;
+    },
+    {
+        &quot;id&quot;: 196,
+        &quot;title&quot;: &quot;Nauru&quot;
+    },
+    {
+        &quot;id&quot;: 129,
+        &quot;title&quot;: &quot;Nepal&quot;
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;title&quot;: &quot;Netherlands&quot;
+    },
+    {
+        &quot;id&quot;: 197,
+        &quot;title&quot;: &quot;New Zealand&quot;
+    },
+    {
+        &quot;id&quot;: 169,
+        &quot;title&quot;: &quot;Nicaragua&quot;
+    },
+    {
+        &quot;id&quot;: 88,
+        &quot;title&quot;: &quot;Niger&quot;
+    },
+    {
+        &quot;id&quot;: 89,
+        &quot;title&quot;: &quot;Nigeria&quot;
+    },
+    {
+        &quot;id&quot;: 130,
+        &quot;title&quot;: &quot;North Korea&quot;
+    },
+    {
+        &quot;id&quot;: 18,
+        &quot;title&quot;: &quot;Norway&quot;
+    },
+    {
+        &quot;id&quot;: 206,
+        &quot;title&quot;: &quot;Oman&quot;
+    },
+    {
+        &quot;id&quot;: 207,
+        &quot;title&quot;: &quot;Other&quot;
+    },
+    {
+        &quot;id&quot;: 131,
+        &quot;title&quot;: &quot;Pakistan&quot;
+    },
+    {
+        &quot;id&quot;: 198,
+        &quot;title&quot;: &quot;Palau&quot;
+    },
+    {
+        &quot;id&quot;: 170,
+        &quot;title&quot;: &quot;Panama&quot;
+    },
+    {
+        &quot;id&quot;: 199,
+        &quot;title&quot;: &quot;Papua New Guinea&quot;
+    },
+    {
+        &quot;id&quot;: 186,
+        &quot;title&quot;: &quot;Paraguay&quot;
+    },
+    {
+        &quot;id&quot;: 187,
+        &quot;title&quot;: &quot;Peru&quot;
+    },
+    {
+        &quot;id&quot;: 132,
+        &quot;title&quot;: &quot;Philippines&quot;
+    },
+    {
+        &quot;id&quot;: 19,
+        &quot;title&quot;: &quot;Poland&quot;
+    },
+    {
+        &quot;id&quot;: 20,
+        &quot;title&quot;: &quot;Portugal&quot;
+    },
+    {
+        &quot;id&quot;: 171,
+        &quot;title&quot;: &quot;Puerto Rico&quot;
+    },
+    {
+        &quot;id&quot;: 133,
+        &quot;title&quot;: &quot;Qatar&quot;
+    },
+    {
+        &quot;id&quot;: 21,
+        &quot;title&quot;: &quot;Romania&quot;
+    },
+    {
+        &quot;id&quot;: 22,
+        &quot;title&quot;: &quot;Russia&quot;
+    },
+    {
+        &quot;id&quot;: 90,
+        &quot;title&quot;: &quot;Rwanda&quot;
+    },
+    {
+        &quot;id&quot;: 172,
+        &quot;title&quot;: &quot;Saint Kitts and Nevis&quot;
+    },
+    {
+        &quot;id&quot;: 173,
+        &quot;title&quot;: &quot;Saint Lucia&quot;
+    },
+    {
+        &quot;id&quot;: 174,
+        &quot;title&quot;: &quot;Saint Vincent and the Grenadines&quot;
+    },
+    {
+        &quot;id&quot;: 200,
+        &quot;title&quot;: &quot;Samoa&quot;
+    },
+    {
+        &quot;id&quot;: 148,
+        &quot;title&quot;: &quot;San Marino&quot;
+    },
+    {
+        &quot;id&quot;: 91,
+        &quot;title&quot;: &quot;Sao Tome and Principe&quot;
+    },
+    {
+        &quot;id&quot;: 134,
+        &quot;title&quot;: &quot;Saudi Arabia&quot;
+    },
+    {
+        &quot;id&quot;: 92,
+        &quot;title&quot;: &quot;Senegal&quot;
+    },
+    {
+        &quot;id&quot;: 40,
+        &quot;title&quot;: &quot;Serbia&quot;
+    },
+    {
+        &quot;id&quot;: 93,
+        &quot;title&quot;: &quot;Seychelles&quot;
+    },
+    {
+        &quot;id&quot;: 94,
+        &quot;title&quot;: &quot;Sierra Leone&quot;
+    },
+    {
+        &quot;id&quot;: 135,
+        &quot;title&quot;: &quot;Singapore&quot;
+    },
+    {
+        &quot;id&quot;: 23,
+        &quot;title&quot;: &quot;Slovakia&quot;
+    },
+    {
+        &quot;id&quot;: 41,
+        &quot;title&quot;: &quot;Slovenia&quot;
+    },
+    {
+        &quot;id&quot;: 201,
+        &quot;title&quot;: &quot;Solomon Islands&quot;
+    },
+    {
+        &quot;id&quot;: 95,
+        &quot;title&quot;: &quot;Somalia&quot;
+    },
+    {
+        &quot;id&quot;: 52,
+        &quot;title&quot;: &quot;South Africa&quot;
+    },
+    {
+        &quot;id&quot;: 136,
+        &quot;title&quot;: &quot;South Korea&quot;
+    },
+    {
+        &quot;id&quot;: 96,
+        &quot;title&quot;: &quot;South Sudan&quot;
+    },
+    {
+        &quot;id&quot;: 24,
+        &quot;title&quot;: &quot;Spain&quot;
+    },
+    {
+        &quot;id&quot;: 137,
+        &quot;title&quot;: &quot;Sri Lanka&quot;
+    },
+    {
+        &quot;id&quot;: 205,
+        &quot;title&quot;: &quot;Sudan&quot;
+    },
+    {
+        &quot;id&quot;: 188,
+        &quot;title&quot;: &quot;Suriname&quot;
+    },
+    {
+        &quot;id&quot;: 97,
+        &quot;title&quot;: &quot;Swaziland&quot;
+    },
+    {
+        &quot;id&quot;: 25,
+        &quot;title&quot;: &quot;Sweden&quot;
+    },
+    {
+        &quot;id&quot;: 26,
+        &quot;title&quot;: &quot;Switzerland&quot;
+    },
+    {
+        &quot;id&quot;: 138,
+        &quot;title&quot;: &quot;Syria&quot;
+    },
+    {
+        &quot;id&quot;: 112,
+        &quot;title&quot;: &quot;Taiwan&quot;
+    },
+    {
+        &quot;id&quot;: 139,
+        &quot;title&quot;: &quot;Tajikistan&quot;
+    },
+    {
+        &quot;id&quot;: 98,
+        &quot;title&quot;: &quot;Tanzania&quot;
+    },
+    {
+        &quot;id&quot;: 140,
+        &quot;title&quot;: &quot;Thailand&quot;
+    },
+    {
+        &quot;id&quot;: 99,
+        &quot;title&quot;: &quot;Togo&quot;
+    },
+    {
+        &quot;id&quot;: 202,
+        &quot;title&quot;: &quot;Tonga&quot;
+    },
+    {
+        &quot;id&quot;: 175,
+        &quot;title&quot;: &quot;Trinidad and Tobago&quot;
+    },
+    {
+        &quot;id&quot;: 100,
+        &quot;title&quot;: &quot;Tunisia&quot;
+    },
+    {
+        &quot;id&quot;: 28,
+        &quot;title&quot;: &quot;Turkey&quot;
+    },
+    {
+        &quot;id&quot;: 141,
+        &quot;title&quot;: &quot;Turkmenistan&quot;
+    },
+    {
+        &quot;id&quot;: 203,
+        &quot;title&quot;: &quot;Tuvalu&quot;
+    },
+    {
+        &quot;id&quot;: 101,
+        &quot;title&quot;: &quot;Uganda&quot;
+    },
+    {
+        &quot;id&quot;: 42,
+        &quot;title&quot;: &quot;Ukraine&quot;
+    },
+    {
+        &quot;id&quot;: 142,
+        &quot;title&quot;: &quot;United Arab Emirates&quot;
+    },
+    {
+        &quot;id&quot;: 6,
+        &quot;title&quot;: &quot;United Kingdom&quot;
+    },
+    {
+        &quot;id&quot;: 176,
+        &quot;title&quot;: &quot;United States of America&quot;
+    },
+    {
+        &quot;id&quot;: 189,
+        &quot;title&quot;: &quot;Uruguay&quot;
+    },
+    {
+        &quot;id&quot;: 143,
+        &quot;title&quot;: &quot;Uzbekistan&quot;
+    },
+    {
+        &quot;id&quot;: 204,
+        &quot;title&quot;: &quot;Vanuatu&quot;
+    },
+    {
+        &quot;id&quot;: 149,
+        &quot;title&quot;: &quot;Vatican City&quot;
+    },
+    {
+        &quot;id&quot;: 190,
+        &quot;title&quot;: &quot;Venezuela&quot;
+    },
+    {
+        &quot;id&quot;: 144,
+        &quot;title&quot;: &quot;Vietnam&quot;
+    },
+    {
+        &quot;id&quot;: 145,
+        &quot;title&quot;: &quot;Yemen&quot;
+    },
+    {
+        &quot;id&quot;: 102,
+        &quot;title&quot;: &quot;Zambia&quot;
+    },
+    {
+        &quot;id&quot;: 103,
+        &quot;title&quot;: &quot;Zimbabwe&quot;
+    }
+]</code></pre>
+    </details>
+</div>
+
+
+<h2>Payment</h2>
+
+<div class="request">
+    <code>POST https://booking.racesquare.nl/api/customers/</code>
+    <details>
+        <summary>Request</summary>
+        <pre><code>{
+  &quot;organizerId&quot;: 5004843,
+  &quot;isBusiness&quot;: false,
+  &quot;firstName&quot;: &quot;test&quot;,
+  &quot;lastName&quot;: &quot;erdetest&quot;,
+  &quot;email&quot;: &quot;test@test.test&quot;,
+  &quot;phone&quot;: &quot;061245678&quot;,
+  &quot;langCode&quot;: &quot;en&quot;,
+  &quot;companyName&quot;: &quot;&quot;,
+  &quot;companyCoC&quot;: &quot;&quot;,
+  &quot;companyVat&quot;: &quot;&quot;,
+  &quot;companyCity&quot;: &quot;&quot;,
+  &quot;companyStreet&quot;: &quot;&quot;,
+  &quot;companyHouseNumber&quot;: &quot;&quot;,
+  &quot;companyPostalCode&quot;: &quot;&quot;,
+  &quot;countryId&quot;: 3,
+  &quot;agreeTermsAndConditions&quot;: true,
+  &quot;agreeF1NewsLetter&quot;: false,
+  &quot;agreeF1RacingCentreNewsLetter&quot;: false
+}</code></pre>
+    </details>
+
+    <details>
+        <summary>Response</summary>
+        <code>200 OK</code>
+        <pre><code>{
+    &quot;id&quot;: 6459811,
+    &quot;firstName&quot;: &quot;test&quot;,
+    &quot;lastName&quot;: &quot;erdetest&quot;,
+    &quot;email&quot;: &quot;test@test.test&quot;,
+    &quot;phone&quot;: &quot;061245678&quot;,
+    &quot;langCode&quot;: null,
+    &quot;vatNumber&quot;: null,
+    &quot;isBusiness&quot;: false,
+    &quot;companyName&quot;: null,
+    &quot;companyCoC&quot;: null,
+    &quot;companyVat&quot;: null,
+    &quot;companyCity&quot;: null,
+    &quot;companyStreet&quot;: null,
+    &quot;companyHouseNumber&quot;: null,
+    &quot;companyPostalCode&quot;: null,
+    &quot;countryId&quot;: 0,
+    &quot;agreeTermsAndConditions&quot;: false,
+    &quot;agreeF1NewsLetter&quot;: false,
+    &quot;agreeF1RacingCentreNewsLetter&quot;: false,
+    &quot;addresses&quot;: null
+}</code></pre>
+    </details>
+</div>
+
+<div class="request">
+    <code>POST https://booking.racesquare.nl/api/purchase/customer</code>
+    <details>
+        <summary>Request</summary>
+        <pre><code>{
+    "organizerId": 5004843,
+    "customerId": 6459811
+}</code></pre>
+    </details>
+
+    Response: <code>204 No Content</code>
+    </details>
+</div>
+
+<div class="request">
+    <code>POST https://booking.racesquare.nl/api/payments/create</code>
+
+    <details>
+        <summary>Request</summary>
+        <pre><code>{
+    "organizerId": 5004843,
+    "paymentMethodId": 3698,
+    "langCode": "en"
+}</code></pre>
+    </details>
+
+    <details>
+        <summary>Response</summary>
+        <code>200 OK</code>
+        <pre><code>{
+            "id": 6842740,
+            "status": "UNCONFIRMED",
+            "price": 25,
+            "paymentServiceInformation": {
+                "pspType": "Epc",
+                "transactionId": "256432099",
+                "sessionId": "0d5711a6-69a9-4768-8f99-0be0e2304fa5",
+                "postUrl": null,
+                "merchantSig": null,
+                "merchantAccount": null,
+                "merchantReference": null,
+                "paymentAmount": null,
+                "currencyCode": null,
+                "shipBeforeDate": null,
+                "sessionValidity": null,
+                "skinCode": null,
+                "signedKeys": null,
+                "resUrl": null,
+                "brandCode": null,
+                "shopperEmail": null,
+                "shopperReference": null,
+                "shopperLocale": null
+        }
+    }</code></pre>
+    </details>
+</div>
+
+</article>
+</body>
+</html>
